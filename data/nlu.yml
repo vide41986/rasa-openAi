@@ -1,0 +1,57 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_question
+  examples: |
+    - Can you help me understand [topic]?
+    - What is [topic]?
+    - How does [topic] work?
+    - Explain [topic] to me
+    - Tell me about [topic]
+    - I need information about [topic]
+    - Can you explain [topic]?
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thanks a lot
+    - thank you very much
+    - appreciate it
+    - thanks for the help

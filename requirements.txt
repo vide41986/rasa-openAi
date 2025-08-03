@@ -1,0 +1,6 @@
+rasa>=3.6.2
+openai>=1.0.0
+supabase-py>=0.0.3
+python-dotenv>=1.0.0
+SQLAlchemy>=1.4.42
+psycopg2-binary>=2.9.9

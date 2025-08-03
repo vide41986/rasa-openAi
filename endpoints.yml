@@ -1,0 +1,17 @@
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+tracker_store:
+  type: "SQL"
+  dialect: "postgresql"
+  url: ${SUPABASE_URL}
+  db: ${SUPABASE_DB_NAME}
+  username: ${SUPABASE_USER}
+  password: ${SUPABASE_PASSWORD}
+  
+# We don't need event broker for this setup
+# event_broker:
+#   type: "pika"
+#   url: "amqp://localhost"
+#   username: "guest"
+#   password: "guest"

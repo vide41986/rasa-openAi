@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  rasa:
+    build: .
+    ports:
+      - "5005:5005"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_DB_NAME=${SUPABASE_DB_NAME}
+      - SUPABASE_USER=${SUPABASE_USER}
+      - SUPABASE_PASSWORD=${SUPABASE_PASSWORD}
+      - TELEGRAM_ACCESS_TOKEN=${TELEGRAM_ACCESS_TOKEN}
+      - BOT_NAME=${BOT_NAME}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+    command: run --enable-api --cors "*"
+
+  rasa-actions:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5055:5055"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_DB_NAME=${SUPABASE_DB_NAME}
+      - SUPABASE_USER=${SUPABASE_USER}
+      - SUPABASE_PASSWORD=${SUPABASE_PASSWORD}
+    command: run actions
